@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Questionnaire from './Questionnaire';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      questionsAndAnswers: [
+        {
+          question: 'Quelle est votre couleur préférée ?',
+          answers: ['Rouge', 'Bleu', 'Vert', 'Jaune'],
+          correctAnswer: 0, // Indice de la réponse correcte
+        },
+        {
+          question: 'Quel est votre animal préféré ?',
+          answers: ['Chien', 'Chat', 'Lion', 'Oiseau'],
+          correctAnswer: 1, // Indice de la réponse correcte
+        },
+        // Ajoutez d'autres questions et réponses ici
+      ],
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Questionnaire questionsAndAnswers={this.state.questionsAndAnswers} />
+      </div>
+    );
+  }
 }
 
 export default App;
