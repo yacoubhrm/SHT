@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card avec Bootstrap</title>
+    <!-- Inclure les fichiers CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Ajouter du style personnalisé */
+        .custom-card {
+            background-image: url('https://media.discordapp.net/attachments/1161656561932976219/1161999835642212472/agressionbg.png?ex=653a57ad&is=6527e2ad&hm=81a741cbdd9811cecfa809c2ecc875e292c88935c2b19b86c09e06f3af71916c&=&width=1587&height=892');
+            background-size: cover;
+            color: white;
+            min-height: 25rem;
+            border-radius: 20px;
+        }
+        body{
+            background-image: url("https://media.discordapp.net/attachments/1161656561932976219/1161998277856735242/wall2.jpg?ex=653a563a&is=6527e13a&hm=35f386032af0a65fe9a7b00b444d9bf6ef5349138b57f7b1f3be6ce0aa8822b4&=&width=1587&height=892");
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark mx-2 px-1">
+
+    <a class="navbar-brand  fs-2" href="../../FirstPage.html">
+        <img  src="https://media.discordapp.net/attachments/1161656561932976219/1161998232323371058/logo.png?ex=653a562f&is=6527e12f&hm=9a7cb207d45d79f5e11ca0986184f3a65cd59b294c6eb49726e5daea5823c0f7&=&width=627&height=717" width="40px" height="40px"/> TÉBON
+    </a>
+    <div class="collapse navbar-collapse me-2" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://app.slack.com/client/T0608LMRP0X/C060L9A0DN1"><img  src="https://media.discordapp.net/attachments/1161656561932976219/1161990143297724467/Slack.png?ex=653a4ea6&is=6527d9a6&hm=a0e495431fb9daf92e4cac20efc1aba44536be025f33e45e8f92515dead84b73&=&width=978&height=978" width="25px" height="25px"/></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">À propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <!-- Utilisation de la classe Bootstrap 'card' pour créer une carte -->
+            <div class="card custom-card">
+                <!-- Utilisation de la classe Bootstrap 'card-header' pour le titre de la card-->
+                <div class="card-header text-center">
+                    <h1>Question 3</h1>
+                </div>
+                <div class="card-body text-center ">
+                    quelle est la peinne encouré poue un personne ayant commis un acte agression sexuelle?
+                </div>
+                <br>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-secondary btn-block" id="btn1">5 ans de prison et 75 000 € d’amende</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-secondary btn-block" id="btn2">3 ans d'emprisonnement et 40 000€ d'amende 15 ans d'emprisonnement et de 200 000€ d'amende</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center" id="loi">
+                    Les actes d’agression sexuelle sont punis de 5 ans de prison et 75 000 € d’amende 10 ans de prison et 150 000 € d’amende si circonstances aggravantes. Lorsque l’agression consiste en un acte de pénétration sexuelle commis sur la personne d’autrui par violence, contrainte, menace ou surprise, il est constitutif d’un viol et classé dans la catégorie des crimes.  15 ans de réclusion criminelle, pouvant aller jusqu’à la réclusion à perpétuité en cas de circonstances aggravantes. Le délai de prescription est de 20 ans.
+                </div>
+                <br>
+                <div class="col-12">
+                    <a class="btn btn-secondary btn-block" id="next" href="../../FirstPage.html">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="home.js"></script>
+<!-- Inclure le fichier JS de Bootstrap (optionnel) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

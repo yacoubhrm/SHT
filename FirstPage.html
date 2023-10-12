@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url("https://media.discordapp.net/attachments/1161656561932976219/1161998277856735242/wall2.jpg?ex=653a563a&is=6527e13a&hm=35f386032af0a65fe9a7b00b444d9bf6ef5349138b57f7b1f3be6ce0aa8822b4&=&width=1587&height=892");
+        }
+
+        .card {
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            height: 20rem;
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #635ce1d5; /* Couleur orange */
+            font-family: "Arial", sans-serif; /* Exemple de police Arial */
+        }
+
+        .container{
+            background-color: rgba(99, 59, 185, 0.588);
+            border-radius: 30px;
+
+        }
+
+
+
+        /* Styles pour le bouton */
+        .accordion {
+            background-color: rgb(41, 24, 168);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: center;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 10px;
+            right: 5px;
+            z-index: 999;
+            display: flex; /* Utilisation de flex pour centrer le contenu */
+            align-items: center; /* Centrage vertical */
+            justify-content: center; /* Centrage horizontal */
+        }
+        /* Autres styles inchangés */
+
+        /* Styles pour l'icône */
+        .icon {
+            width: 70%; /* Taille de l'icône */
+        }
+
+        /* Styles pour le panneau */
+        .panel {
+            display: none;
+            padding: 10px;
+            margin-right: 55px;
+            margin-bottom: 25px;
+            background-color: #f1f1f1;
+            position: fixed;
+            bottom: 0;
+            right: 10px;
+            z-index: 998;
+            border-radius: 20px;
+        }
+
+        iframe {
+            border: none;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .active {
+            position: fixed;
+            background-color: #2196F3;
+        }
+        .animated-banner {
+            background-color: #ffffff00;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            animation: slideIn 2s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .navbar {
+            background-color: rgba(99, 59, 185, 0.588);
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark mx-2 px-1">
+
+    <a class="navbar-brand  fs-2" href="#">
+        <img  src="https://media.discordapp.net/attachments/1161656561932976219/1161998232323371058/logo.png?ex=653a562f&is=6527e12f&hm=9a7cb207d45d79f5e11ca0986184f3a65cd59b294c6eb49726e5daea5823c0f7&=&width=627&height=717" width="40px" height="40px"/> TÉBON
+    </a>
+    <div class="collapse navbar-collapse me-2" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://app.slack.com/client/T0608LMRP0X/C060L9A0DN1"><img  src="https://media.discordapp.net/attachments/1161656561932976219/1161990143297724467/Slack.png?ex=653a4ea6&is=6527d9a6&hm=a0e495431fb9daf92e4cac20efc1aba44536be025f33e45e8f92515dead84b73&=&width=978&height=978" width="25px" height="25px"/></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">À propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<div class="container mt-5 p-5">
+    <div class="chatbot-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="animated-banner">
+                    <h1 class="fs-5">Scenarios</h1>
+                    <p>Ceci est une bannière animée créée avec Bootstrap et CSS.</p>
+                </div>
+            </div>
+        </div>
+        <button class="accordion">
+            <img class="icon" src="https://cdn.discordapp.com/attachments/1161592728849756220/1161670886751993897/robot.png?ex=65392552&is=6526b052&hm=f71bdb4cf87fddcfbe7e7a904ea061a8a214223452252a8aeeb7fb227f2e418e&" alt="robot"/>
+        </button>
+        <div class="panel">
+            <iframe
+                    allow="microphone;"
+                    width="350"
+                    height="430"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/e548bd77-bedd-432d-a7cd-a9aab221c3c1">
+            </iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card" style="background-image: url('https://media.discordapp.net/attachments/1161656561932976219/1161656597177708635/tuto.jpg?ex=65391803&is=6526a303&hm=078c2a0097de26b5d3d3e1874464febae104bcd6871018c4a4db8e88ca044aa5&=&width=1467&height=978');">
+                <div class="card-header bg-white">
+                    <h5 class="card-title text-center">TUTO</h5>
+                </div>
+                <div class="card-body">
+                </div>
+                <div class="card-footer text-center">
+                    <a href="theme1/Question1/home.html" class="btn btn-success col-8 text-center">Start</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="background-image: url('https://media.discordapp.net/attachments/1161656561932976219/1161656597794275418/Harc.jpg?ex=65391803&is=6526a303&hm=cf61e9d1ac90fa37df8614d4cf019a40224510ad8e832ff77035c0b6148bc065&=&width=978&height=978');">
+                <div class="card-header bg-white">
+                    <h5 class="card-title text-center">Harcelement et Drague</h5>
+                </div>
+                <div class="card-body">
+                </div>
+                <div class="card-footer text-center">
+                    <a href="theme2/Question1/home.html" class="btn btn-success col-8 text-center">Start</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="background-image: url('https://media.discordapp.net/attachments/1161656561932976219/1161656596892487690/consentement.jpg?ex=65391803&is=6526a303&hm=ffcbcd4bea0063ba68307dc0f035d0c5b97708f3cc1189c91bac877ae3d59846&=&width=939&height=939');">
+                <div class="card-header bg-white">
+                    <h5 class="card-title text-center">Consentement</h5>
+                </div>
+                <div class="card-body">
+                </div>
+                <div class="card-footer text-center">
+                    <a href="theme3/Question1/home.html" class="btn btn-success col-8 text-center">Start</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="background-image: url('https://media.discordapp.net/attachments/1161656561932976219/1161656597492273182/agr.jpg?ex=65391803&is=6526a303&hm=08c557fe8035d0763b0154bccb2a38c16e2f6741ead35b525c0f491edc1fda16&=&width=939&height=939');">
+                <div class="card-header bg-white">
+                    <h5 class="card-title text-center ">Agression</h5>
+                </div>
+                <div class="card-body">
+                </div>
+                <div class="card-footer text-center">
+                    <a href="theme4/Question1/home.html" class="btn btn-success col-8 text-center">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.classList.remove('blur');
+            cards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.add('blur');
+                }
+            });
+        });
+
+        card.addEventListener('mouseout', () => {
+            cards.forEach(otherCard => {
+                otherCard.classList.remove('blur');
+            });
+        });
+    });
+
+
+    // Récupérer le bouton et le contenu du dépliant
+    var accordion = document.querySelector(".accordion");
+    var panel = document.querySelector(".panel");
+
+    // Ajouter un gestionnaire d'événement au bouton
+    accordion.addEventListener("click", function() {
+        // Inverser l'état du dépliant (ouvrir/fermer)
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            accordion.classList.remove("active");
+        } else {
+            panel.style.display = "block";
+            accordion.classList.add("active");
+        }
+    });
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</body>
+</html>
