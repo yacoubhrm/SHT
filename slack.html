@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<style>
+    body{
+        background-image: url("https://media.discordapp.net/attachments/1161656561932976219/1161998277856735242/wall2.jpg?ex=653a563a&is=6527e13a&hm=35f386032af0a65fe9a7b00b444d9bf6ef5349138b57f7b1f3be6ce0aa8822b4&=&width=1587&height=892");
+    }
+
+    .card {
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        height: 20rem;
+    }
+
+    .blur {
+        filter: blur(5px);
+    }
+
+    .card-title {
+        font-weight: bold;
+        color: #635ce1d5; /* Couleur orange */
+        font-family: "Arial", sans-serif; /* Exemple de police Arial */
+    }
+
+    .container{
+        background-color: rgba(99, 59, 185, 0.588);
+        border-radius: 30px;
+
+    }
+
+
+
+    /* Styles pour le bouton */
+    .accordion {
+        background-color: rgb(41, 24, 168);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+        z-index: 999;
+        display: flex; /* Utilisation de flex pour centrer le contenu */
+        align-items: center; /* Centrage vertical */
+        justify-content: center; /* Centrage horizontal */
+    }
+    /* Autres styles inchangés */
+
+    /* Styles pour l'icône */
+    .icon {
+        width: 70%; /* Taille de l'icône */
+    }
+
+    /* Styles pour le panneau */
+    .panel {
+        display: none;
+        padding: 10px;
+        margin-right: 55px;
+        margin-bottom: 25px;
+        background-color: #f1f1f1;
+        position: fixed;
+        bottom: 0;
+        right: 10px;
+        z-index: 998;
+        border-radius: 20px;
+    }
+
+    iframe {
+        border: none;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 100%;
+    }
+
+    .active {
+        position: fixed;
+        background-color: #2196F3;
+    }
+    .animated-banner {
+        background-color: #ffffff00;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        animation: slideIn 2s forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .navbar {
+        background-color: rgba(99, 59, 185, 0.588);
+        border-radius: 5px;
+    }
+
+</style>
+</head>
+<body>
+<div class="container mt-5 p-5"></div>
+    <div class="chatbot-container"></div>
+        <div class="row"></div>
+            <div class="col-12"></div>
+                <div class="animated-banner">
+                    <h1 class="fs-5">Utilisez Tijean sur votre espace de travail Slack.</h1>
+                    <h2 class="fs-5">Bonjour, pour garantir votre confidentialite, nous vous proposons d'utiliser le chatbot Tijean sur l'application Slack, qui garantit une securite totale pour votre processus d'utilisation.
+                         Vous pouvez l'integrer directement sur votre espace de travail.</h2>
+
+                         <button class="nav-item">
+                            <a class="nav-link" href="https://app.slack.com/client/T0608LMRP0X/C060L9A0DN1"><img  src="https://media.discordapp.net/attachments/1161656561932976219/1161990143297724467/Slack.png?ex=653a4ea6&is=6527d9a6&hm=a0e495431fb9daf92e4cac20efc1aba44536be025f33e45e8f92515dead84b73&=&width=978&height=978" width="25px" height="25px"/></a>
+                        Slack </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

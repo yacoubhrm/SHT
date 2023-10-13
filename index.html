@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="manifest" href="./manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
@@ -119,7 +120,7 @@
     <div class="collapse navbar-collapse me-2" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="https://app.slack.com/client/T0608LMRP0X/C060L9A0DN1"><img  src="https://media.discordapp.net/attachments/1161656561932976219/1161990143297724467/Slack.png?ex=653a4ea6&is=6527d9a6&hm=a0e495431fb9daf92e4cac20efc1aba44536be025f33e45e8f92515dead84b73&=&width=978&height=978" width="25px" height="25px"/></a>
+                <a class="nav-link" href="./slack.html"><img  src="https://media.discordapp.net/attachments/1161656561932976219/1161990143297724467/Slack.png?ex=653a4ea6&is=6527d9a6&hm=a0e495431fb9daf92e4cac20efc1aba44536be025f33e45e8f92515dead84b73&=&width=978&height=978" width="25px" height="25px"/></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">À propos</a>
@@ -243,6 +244,17 @@
             accordion.classList.add("active");
         }
     });
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(registration => {
+      console.log('Service Worker enregistré avec succès!', registration);
+    })
+
+  });
+}
+
+    
 
 </script>
 
